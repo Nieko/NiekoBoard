@@ -1,0 +1,140 @@
+syntax = "proto3";
+
+option csharp_namespace = "NiekoBoard.Gprc";
+
+package niekoboard;
+
+service ScriptsSource {
+  rpc GetScripts(ScriptsRequest) returns (ScriptsResponse);
+  rpc GetLatestUpdate(ScriptUpdateRequest) returns (ScriptUpdateResponse);
+  rpc ExecuteAction(ExecuteScriptActionRequest) returns (ExecuteScriptActionResponse);
+}
+
+message ScriptsRequest {
+}
+
+message Script {
+	string scriptId = 1;
+	string name = 2;
+	string description = 3;
+	string lastChanged = 4;
+	int32 features = 5;
+    repeated string customResultsRange = 6;
+    repeated string actions = 7;
+}
+
+message ScriptsResponse {
+	repeated Script scripts = 1;
+	string error = 2;
+}
+
+message ExecuteScriptActionRequest {
+	string scriptId = 1;
+	int32 actionIndex = 2;
+}
+
+message ExecuteScriptActionResponse {
+	string result = 1;
+	string error = 2;
+}
+
+message ScriptUpdateRequest {
+	string scriptId = 1;
+}
+
+message ScriptUpdateResponse {
+	string result = 1;
+	string error = 2;
+}
+
+service ConfigStore {
+	rpc GetConfigs(GetConfigsRequest) returns (GetConfigsResponse);
+	rpc SaveConfig(SaveConfigRequest) returns (SaveConfigResponse);
+	rpc DeleteConfig(DeleteConfigRequest) returns (DeleteConfigResponse);
+}
+
+message GetConfigsRequest {
+	string scriptId = 1;
+}
+
+message PositionRectangle {
+	int32 x = 1;
+	int32 y = 2;
+	int32 width = 3;
+	int32 height = 4;
+}
+
+message ScriptWidget {
+	string lastChanged = 1;
+    string widgetName = 2;
+    string configData = 3;
+    string configUI = 4;
+}
+
+message ScriptConfig {
+	string scriptId = 1;
+	Script scriptHeader = 2;
+    string pollingFrequency = 3;
+    PositionRectangle position = 4;
+    repeated ScriptWidget widgets = 5;
+}
+
+message GetConfigsResponse {
+	repeated ScriptConfig configs = 1;
+	string error = 2;
+}
+
+message SaveConfigRequest {
+	ScriptConfig config = 1;
+}
+
+message SaveConfigResponse {
+	string error = 1;
+}
+
+message DeleteConfigRequest {
+	string scriptId = 1;
+}
+
+message DeleteConfigResponse {
+	string error = 1;
+}
+
+service HistoryStore {
+	rpc GetHistory(GetHistoryRequest) returns (GetHistoryResponse);
+	rpc Save(EditHistoryRequest) returns (EditHistoryResponse);
+	rpc Delete(EditHistoryRequest) returns (EditHistoryResponse);
+	rpc DeleteAll(DeleteAllHistoryRequest) returns (DeleteAllHistoryResponse);
+}
+
+message GetHistoryRequest {
+	string scriptId = 1;
+}
+
+message GetHistoryResponse {
+	repeated ScriptHistory history = 1;
+	string error = 2;
+}
+
+message ScriptHistory {
+	string asAt = 1;
+	string result = 2;
+}
+
+message EditHistoryRequest {
+	string scriptId = 1;
+	ScriptHistory scriptEvent = 2;
+}
+
+message EditHistoryResponse {
+	string error = 1;
+}
+
+message DeleteAllHistoryRequest {
+	string scriptId = 1;
+}
+
+message DeleteAllHistoryResponse {
+	string error = 1;
+}
+

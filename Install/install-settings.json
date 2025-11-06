@@ -1,0 +1,10 @@
+{
+    "database": {
+        "type": "mssql",
+        "database": "niekoboard",
+        "server":"DANAMI"
+    },
+    "iis": {
+        "apppool": "IIS APPPOOL\\NiekoBoardPool"
+    }
+}

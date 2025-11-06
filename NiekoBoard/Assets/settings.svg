@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="10.776999mm"
+   height="10.776999mm"
+   viewBox="0 0 10.776999 10.776999"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="settings.svg"
+   inkscape:export-filename="settings.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="16"
+     inkscape:cx="11.75"
+     inkscape:cy="21.21875"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-53.961983,-46.44275)" />
+  <g
+     inkscape:label="Rendered Gears"
+     transform="translate(5.2668596,5.2668643)"
+     id="g20">
+    <path
+       style="fill:none;stroke:#cfcfcf;stroke-width:0.777;stroke-opacity:1;stroke-dasharray:none;stroke-linejoin:round"
+       d="M 2.90198,-0.51707 4.619,-0.34776 V 0.34776 L 2.90198,0.51707 2.55541,1.46926 3.7619,2.70263 3.31482,3.23544 1.89068,2.26145 1.01313,2.7681 1.14456,4.48844 0.4596,4.60921 -0.00529,2.94768 -1.0032,2.77172 -2.00833,4.17405 -2.61067,3.82629 -1.89878,2.25465 -2.55012,1.47842 -4.2215,1.90658 -4.45938,1.253 -2.90381,0.50665 v -1.0133 l -1.55557,-0.74635 0.23788,-0.65358 1.67138,0.42816 0.65134,-0.77623 -0.71189,-1.57164 0.60234,-0.34776 1.00513,1.40233 0.99791,-0.17596 0.46489,-1.66153 0.68496,0.12077 -0.13143,1.72034 0.87755,0.50665 1.42414,-0.97399 0.44708,0.53281 -1.20649,1.23337 z"
+       id="path19"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccc" />
+    <circle
+       style="fill:none;stroke:#cfcfcf;stroke-width:0.777;stroke-dasharray:none;fill-opacity:1;stroke-opacity:1"
+       id="path20"
+       cx="0"
+       cy="0"
+       r="1.3229166" />
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "NiekoBoard.Client": {
+      "commandName": "Project",
+      "commandLineArgs": "GetScripts"
+    }
+  }
+}

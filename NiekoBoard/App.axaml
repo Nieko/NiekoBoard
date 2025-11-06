@@ -1,0 +1,18 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:nb="clr-namespace:NiekoBoard.Views;assembly=NiekoBoard"
+			 x:Class="NiekoBoard.App"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+    <Application.Styles>
+        <FluentTheme />
+    </Application.Styles>
+	<Application.Resources>
+		<Color x:Key="SuccessStatusColor">#FF76E889</Color>
+		<Color x:Key="WarningStatusColor">#FFFFEB00</Color>
+		<Color x:Key="FailStatusColor">#FFD70953</Color>
+		<nb:WidgetStatusColorConverter x:Key="widgecolverter"/>
+		<nb:WidgetViewModelConverter x:Key="widgeverter"/>
+		<nb:BlankStringBoolConverter x:Key="stringboolverter"/>
+	</Application.Resources>
+</Application>

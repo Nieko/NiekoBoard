@@ -1,0 +1,61 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:NiekoBoard.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="NiekoBoard.Views.MainView"
+             x:DataType="vm:IMainViewModel">
+  <Design.DataContext>
+    <vm:MainViewModelDesign />
+  </Design.DataContext>
+	<DockPanel Background="#FFF8F7">
+		<Grid DockPanel.Dock="Top" Height="72">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="60"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="12"/>
+			</Grid.RowDefinitions>
+			<Panel Grid.ColumnSpan="2" Grid.Row="" Background="White"/>
+			<Panel Background="White">
+				<Image Margin="4" Source="/Assets/logo.png"/>
+			</Panel>
+			<Grid Grid.ColumnSpan="2" Grid.RowSpan="2" 
+				  HorizontalAlignment="Center" Margin="60,10">
+				<Label FontSize="24" FontWeight="Bold">nieko board</Label>
+			</Grid>
+		</Grid>
+		<Border DockPanel.Dock="Bottom" Background="#FF817A"  IsVisible="{Binding ServerErrors, Converter={StaticResource stringboolverter}}">
+			<Panel Height="56">
+				<Label Margin="12,0" Content="{Binding ServerErrors}"/>
+			</Panel>
+		</Border>
+		<ItemsControl DockPanel.Dock="Bottom" ItemsSource="{Binding Widgets}">
+			<ItemsControl.ItemsPanel>
+				<ItemsPanelTemplate>
+					<UniformGrid Rows="{Binding WidgetRows}" Columns="{Binding WidgetColumns}"/>
+				</ItemsPanelTemplate>
+			</ItemsControl.ItemsPanel>
+			<ItemsControl.ItemTemplate>
+				<DataTemplate>
+					<Border Margin="15" Padding="2" CornerRadius="4"
+							Background="{Binding Converter={StaticResource widgecolverter}}"
+							BoxShadow="{Binding Converter={StaticResource widgecolverter}, ConverterParameter='0,0,14,1'}">
+						<Grid Background="#99FFFFFF">
+							<DockPanel Margin="8" >
+								<Grid DockPanel.Dock="Top" Margin="10 5">
+									<Label HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Content="{Binding Script.Name}"/>
+								</Grid>
+								<ContentControl Theme="{StaticResource WidgetPanel}"
+										Content="{Binding, Converter={StaticResource widgeverter}}"/>
+							</DockPanel>
+						</Grid>
+					</Border>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+	</DockPanel>
+</UserControl>

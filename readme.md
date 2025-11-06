@@ -6,7 +6,7 @@ dashboard.
 
 _NOTE - PLEASE READ_
 
-This dashboard can, with some minor poorly thought-through manual recofigurations, allow for any user to drop a powershell file into a folder and have it
+This dashboard can, with some minor poorly thought-through manual reconfigurations, allow for any user to drop a powershell file into a folder and have it
 executed periodically as administrator. If this doesn't raise the hairs on the back of your Cyber Security neck, this project may not be
 for you.
 

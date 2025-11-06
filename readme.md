@@ -5,7 +5,7 @@ picks up all powershell files sitting in a folder and presents their status and 
 dashboard.
 
 __NOTE - PLEASE READ_\_
-This dashboard can, with some minor poorly thought-through manual recofigurations, allow for any user to drop a powershell file into a folder and have it
+This dashboard can, with some minor poorly thought-through manual reconfigurations, allow for any user to drop a powershell file into a folder and have it
 executed periodically as administrator. If this doesn't raise the hairs on the back of your Cyber Security neck, this project may not be
 for you.
 
@@ -17,6 +17,7 @@ The assumed setup is 4-tier system:
 * Windows Service, same machine as gPRC, comms via named pipes
 * SQL Database (settings / history) and File Folder containing powershell scripts.
 
+<pre>
 ┌─────────────────────────┐  ┌───────────────────────────────┐
 │                         │  │                               │
 │      Client Desktop     │  │      Server                   │
@@ -53,6 +54,7 @@ The assumed setup is 4-tier system:
                              │  │            ││           │  │
                              │  └────────────┘└───────────┘  │
                              └───────────────────────────────┘
+</pre>
 # Version Changes
 
 ## 0.2.0.0
